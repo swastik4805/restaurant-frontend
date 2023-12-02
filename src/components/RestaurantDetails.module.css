@@ -1,23 +1,38 @@
-/* RestaurantDetails.module.css */
+/* src/components/RestaurantDetails.module.css */
 .container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .heading {
-    color: #333;
-  }
-  
-  subHeading {
-    color: #555;
-  }
-  
-  .link {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  color: #333;
+}
+
+.subHeading {
+  color: #007BFF;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.professional-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007BFF; /* Change color as needed */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.professional-button:hover {
+  background-color: #0056b3; /* Change color as needed */
+}
