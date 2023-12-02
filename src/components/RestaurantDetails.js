@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import styles from './RestaurantDetails.module.css';
 
 const RestaurantDetails = () => {
   const { name } = useParams();
@@ -22,14 +23,14 @@ const RestaurantDetails = () => {
   }
 
   return (
-    <div>
-    <h2>{restaurant.name}</h2>
-    <p>Location: {restaurant.location.address}</p>
+    <div className={styles.container}>
+    <h2 className={styles.heading}>{restaurant.name}</h2>
+      <p><strong>Location:</strong> {restaurant.location.address}</p>
 
-    <h3>Chef Details</h3>
-    <p>Chef: {restaurant.chef.name}</p>
-    <p>Bio: {restaurant.chef.bio}</p>
-    <p>Signature Dish: {restaurant.chef.signature_dish}</p>
+      <h3 className={styles.subHeading}>Chef Details</h3>
+      <p><strong>Chef:</strong> {restaurant.chef.name}</p>
+      <p><strong>Bio:</strong> {restaurant.chef.bio}</p>
+      <p><strong>Signature Dish:</strong> {restaurant.chef.signature_dish}</p>
 
     <h3>Awards</h3>
     <ul>
