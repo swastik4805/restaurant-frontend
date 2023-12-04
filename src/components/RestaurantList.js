@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import ImageSlider from '../ImageSlider';
 
 const RestaurantList = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -18,16 +19,19 @@ const RestaurantList = () => {
 
   return (
     <div>
-      <h2>Restaurant List</h2>
-      <ul>
-        {restaurants.map((restaurant) => (
-          <li key={restaurant.name}>
-            <Link to={`/restaurant/${restaurant.name}`}>
-              {restaurant.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <ImageSlider/>
+      <div style={{display:'flex',justifyContent:'center', alignItems:'center'}}>
+        <h2>Welcome to the Website</h2>
+        <ul>
+          {restaurants.map((restaurant) => (
+            <li key={restaurant.name}>
+              <Link to={`/restaurant/${restaurant.name}`}>
+                {restaurant.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

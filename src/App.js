@@ -12,9 +12,8 @@ function App() {
     <Router>
       <Navbar />
       {/* <br></br> */}
-      <divn>
-      <ImageSlider/>
-      </divn>
+      <div>
+      </div>
       <Routes>
         <Route path="/" element={<RestaurantList />} />
         <Route path="/restaurant/:name" element={<RestaurantDetails />} />

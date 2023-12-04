@@ -59,9 +59,13 @@ const RestaurantDetails = () => {
     <h3>Awards</h3>
     <ul>
       {restaurant.awards.map((award, index) => (
-        <li key={index}>{award.year} - {award.organization}: {award.award}</li>
+        <li key={index}>
+          <strong>{award.year}</strong> - {award.organization}: {award.award}
+        <br/>
+        </li>
       ))}
     </ul>
+
 
     <h3>Ambiance</h3>
     <p>{restaurant.ambiance.description}</p>
